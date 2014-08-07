@@ -1,0 +1,12 @@
+{
+    "name": "claudejanz/jquery-slider",
+    "description": "forked from jssor/jquery-slider add composer file",
+    "authors": [
+        {
+            "name": "Claude Janz",
+            "email": "claudejanz@gmail.com"
+        }
+    ]
+    
+    
+}
