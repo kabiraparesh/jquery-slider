@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "claudejanz\\jquery-slider\\widgets\\": "widgets"
+            "claudejanz\\jquerySlider\\widgets\\": "widgets"
         }
     },
     "require": {

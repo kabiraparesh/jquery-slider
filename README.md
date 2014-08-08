@@ -1,3 +1,55 @@
+Implementation for yii2 framework of jssor/jquery-slider
+--------------------------------------
+
+This is a fork of jssor/jquery-slider with an additionnal SliderWidget and SliderAsset for yii framework 
+
+## Installation
+
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+
+Either run
+
+```
+$ php composer.phar require "claudejanz/query-slider": "dev-master"
+```
+
+or add
+
+```
+"claudejanz/query-slider": "dev-master"
+```
+
+to the ```require``` section of your `composer.json` file.
+
+## Usage
+
+```php
+use claudejanz\jquerySlider\widgets\SliderWidget;
+use yii\web\JsExpression;
+
+SliderWidget::begin([
+    'responsive' => true,
+    'options'=>['style'=>'position: relative; top: 0px; left: 0px; width: 600px; height: 300px;'],
+    'pluginOptions' => [
+        '$AutoPlay' => true,
+        '$AutoPlayInterval' => 6000,
+        '$SlideDuration' => 800,
+        '$SlideshowOptions' => [
+            '$Class' => new JsExpression('$JssorSlideshowRunner$'),
+            '$Transitions' => [
+                ['$Duration' => 700, '$Opacity' => 2, '$Brother' => ['$Duration' => 1000, '$Opacity' => 2]]
+            ]
+        ]
+    ]
+]);
+echo '<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+                    <div><img u="image" src="images/01.jpg" /></div>
+                    <div><img u="image" src="images/02.jpg" /></div>
+                </div>';
+SliderWidget::end();
+```
+
+
 Free jQuery Slider/Carousel/Slideshow
 --------------------------------------
 
