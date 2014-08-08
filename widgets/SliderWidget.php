@@ -59,7 +59,7 @@ class SliderWidget extends Widget {
             function " . $id . "ScaleSlider() {
                 var parentWidth = $id.\$Elmt.parentNode.clientWidth;
                 if (parentWidth)
-                    $id.\$SetScaleWidth(Math.min(parentWidth, 600));
+                    $id.\$SetScaleWidth(parentWidth-30);
                 else
                     window.setTimeout(" . $id . "ScaleSlider, 30);
             }
