@@ -12,16 +12,18 @@ use yii\base\Widget;
  * @author Claude Janz <claudejanz@gmail.com> 
  */
 class SliderWidget extends Widget {
+    
+    public $margin_right_responsive = 30;
 
     public $responsive = true;
 
     /**
-     * @var array the HTML attributes for the input tag.
+     * @var array the HTML attributes for the div tag.
      */
     public $options;
 
     /**
-     * @var array options for datepicker
+     * @var array options for Slider plugin
      */
     public $pluginOptions = [];
 
@@ -59,7 +61,7 @@ class SliderWidget extends Widget {
             function " . $id . "ScaleSlider() {
                 var parentWidth = $id.\$Elmt.parentNode.clientWidth;
                 if (parentWidth)
-                    $id.\$SetScaleWidth(parentWidth-30);
+                    $id.\$SetScaleWidth(parentWidth-$this->margin_right_responsive);
                 else
                     window.setTimeout(" . $id . "ScaleSlider, 30);
             }
