@@ -12,6 +12,7 @@
             "claudejanz\\jquerySlider\\widgets\\": "widgets"
         }
     },
+    "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "*"
     }
